@@ -6,7 +6,6 @@ mapping_response:
   Deutsch: Germany
   DEUTSCH: Germany
   DEU: Germany
-  DEUTSCH : Germany
   de: Germany
   detsch: Germany
   deusch: Germany
@@ -14,12 +13,13 @@ mapping_response:
   Dd: Germany
   Deuts: Germany
   " german": Germany
+  "DEUTSCH ": Germany
   polen: Poland
   Polen: Poland
   polish: Poland
   irish: Ireland
   british: United Kingdom
-  british : United Kingdom
+  "british ": United Kingdom
   english: United Kingdom
   Scottish: United Kingdom
   french: France
@@ -54,7 +54,7 @@ mapping_response:
   admin: Test
   Admin: Test
 
-  morgen : Spam
+  "morgen ": Spam
   penis: Spam
   Flackenhorster: Spam
 
@@ -260,7 +260,7 @@ mapping_response:
   "ss": "SS"
   "SS": "SS"
   "SS, SA": "SS__SA"
-  "ss wehrmacht": "SS__Wehrmacht"
+  "ss wehrmacht ": "SS__Wehrmacht"
   "schulsturm theoretisch ss": "SS"
 
   "Juden": "Jews"
@@ -277,7 +277,7 @@ mapping_response:
   "Juden, Homosexuelle, Sinti&Roma, Behinderte": "Jews__Homosexuals__Sinti and Roma__Disabled people"
   "juden, andere politidche meinung, sinti und roma, homosexuelle, behinderte": "Jews__Political opponents__Sinti and Roma__Homosexuals__Disabled people"
   "Homosxuelle, Juden, Sint und Roma, Behinderte": "Homosexuals__Jews__Sinti and Roma__Disabled people"
-  "juden schwule": "Jews__Homosexuals"
+  "juden schwule ": "Jews__Homosexuals"
   "Juden, Sinti u. Roma, Homosexuelle, polit. Gegner, Behinderte": "Jews__Sinti and Roma__Homosexuals__Political opponents__Disabled people"
   "sinti, roma, Homosexuelle, 'asoziale', behinderte, psychisch kranke, Osteuropaeische Personeb, politische Gegner.innen, Kommunisten, kuenstler (entartete kunst), Schwarze, BIPOC": "Sinti and Roma__Homosexuals__Asocials__Disabled people__Mentally ill__Eastern Europeans__Political opponents__Communists__Artists__Black people__BIPOC"
   "juden homosexuelle politische gegner": "Jews__Homosexuals__Political opponents"
@@ -301,7 +301,7 @@ mapping_response:
   "Lgtbi, Judes, Romanianpeople, discapacity minorist": "LGBTQ+__Jews__Romanians__Disabled people"
   "tzigane homosexual disable people soviet": "Sinti and Roma__Homosexuals__Disabled people__Soviets"
   "disabled, socialists, gay,jews, roma and sinti, union leaders, some priests": "Disabled people__Socialists__Homosexuals__Jews__Sinti and Roma__Union leaders__Priests"
-  "joden zigeuners": "Jews__Sinti and Roma"
+  "joden zigeuners ": "Jews__Sinti and Roma"
   "sinti u roma, homosexuelle, asoziale, juden, zeugen jehovas, kommunisten, politischd oppositionek": "Sinti and Roma__Homosexuals__Asocials__Jews__Jehovah's Witnesses__Communists__Political opponents"
   "sinti und roma": "Sinti and Roma"
   "Kommunisten": "Communists"
@@ -309,8 +309,17 @@ mapping_response:
   "Roma,Sinti,Juden, Homosexuelle, politische, Sozialdemokraten etc": "Sinti and Roma__Jews__Homosexuals__Political opponents__Social Democrats"
   "juden sinti krankenleuten": "Jews__Sinti and Roma__Disabled people"
   "juden, homosexuelle, politisch andersvgesinnte, sinthi roma": "Jews__Homosexuals__Political opponents__Sinti and Roma"
-  "juden,Gleichgesinte paare": "Jews__Same-sex couples"
+  "juden,Gleichgesinte paare": "Jews__Homosexuals"
   "juden, zeugen johovas, homosexuele, kranke, behinderte": "Jews__Jehovah's Witnesses__Homosexuals__Sick people__Disabled people"
+  "Jüd*innen, Sinti, Roma, Homosexuelle, sog.  Asoziale, sog. Berufsverbrecher, politische Gegener*innen":
+  "Juden, Sinti und Roma, Homosexuelle,Menschen mit Behinderung,": "Jews__Sinti and Roma__Homosexuals__Disabled people"
+  "Juden, Behinderte, Sinti und Roma ": "Jews__Disabled people__Sinti and Roma"
+  "Sinti, Roma, Homosexuelle, Asoziale, , pol. Verfolgt, Juden, Berufsverbrecher, POC, Zeugen Jehovas, ZwangsarbeiterInnen,": "Sinti and Roma__Homosexuals__Asocials__Political opponents__Jews__Career criminals__BIPOC__Jehovah's Witnesses__Forced laborers"
+  "Juden, Slawen, Homosexuelle, Zeugen Jehovas": "Jews__Slavs__Homosexuals__Jehovah's Witnesses"
+  "juden, homosexuelle,kommunisten": "Jews__Homosexuals__Communists"
+  "Juden, Homosexuelle": Jews__Homosexuals
+  "juden, homosexuelle,kommunisten": Jews__Homosexuals__Communists
+  "sinti, roma, juden, behinderte, kommunisten, homosexuelle": Sinti and Roma__Jews__Disabled people__Communists__Homosexuals
 
   # Tech
   "Virtual Reality (VR)": "Virtual Reality (VR)"
@@ -331,38 +340,41 @@ mapping_response:
   "I play video games 0.5 hours per week.": 0.5
   "I play video games no hours per week.": 0
   "I play video games d hours per week.": "Invalid"
+  "I play video games  hours per week.": "Invalid"
+  " Ich spiele  Stunden pro Woche Videospiele.": "Invalid"
 
-  "Ich spiele 0 Stunden pro Woche Videospiele.": 0
-  "Ich spiele 1 Stunden pro Woche Videospiele.": 1
-  "Ich spiele 2 Stunden pro Woche Videospiele.": 2
-  "Ich spiele 3 Stunden pro Woche Videospiele.": 3
-  "Ich spiele 4 Stunden pro Woche Videospiele.": 4
-  "Ich spiele 5 Stunden pro Woche Videospiele.": 5
-  "Ich spiele 8 Stunden pro Woche Videospiele.": 8
-  "Ich spiele 9 Stunden pro Woche Videospiele.": 9
-  "Ich spiele 10 Stunden pro Woche Videospiele.": 10
-  "Ich spiele 15 Stunden pro Woche Videospiele.": 15
-  "Ich spiele 20 Stunden pro Woche Videospiele.": 20
-  "Ich spiele 24 Stunden pro Woche Videospiele.": 24
-  "Ich spiele 25 Stunden pro Woche Videospiele.": 25
-  "Ich spiele 30 Stunden pro Woche Videospiele.": 30
-  "Ich spiele 70 Stunden pro Woche Videospiele.": 70
-  "Ich spiele 78 Stunden pro Woche Videospiele.": 78
-  "Ich spiele 120 Stunden pro Woche Videospiele.": 120
-  "Ich spiele 9999999999999 Stunden pro Woche Videospiele.": "Spam"
-  "Ich spiele 0,5 Stunden pro Woche Videospiele.": 0.5
-  "Ich spiele .0 Stunden pro Woche Videospiele.": 0
-  "Ich spiele 24/7 Stunden pro Woche Videospiele.": 168
-  "Ich spiele min. 20 Stunden pro Woche Videospiele.": 20
+  " Ich spiele null Stunden pro Woche Videospiele.": 0
+  " Ich spiele keine Stunden pro Woche Videospiele.": 0
+  " Ich spiele nie Stunden pro Woche Videospiele.": 0
+  " Ich spiele gar nicht Stunden pro Woche Videospiele.": 0
+  " Ich spiele nicht Stunden pro Woche Videospiele.": 0
+  " Ich spiele nichts Stunden pro Woche Videospiele.": 0
+  " Ich spiele 0 Stunden pro Woche Videospiele.": 0
+  " Ich spiele 1 Stunden pro Woche Videospiele.": 1
+  " Ich spiele 2 Stunden pro Woche Videospiele.": 2
+  " Ich spiele 3 Stunden pro Woche Videospiele.": 3
+  " Ich spiele 4 Stunden pro Woche Videospiele.": 4
+  " Ich spiele 5 Stunden pro Woche Videospiele.": 5
+  " Ich spiele 8 Stunden pro Woche Videospiele.": 8
+  " Ich spiele 9 Stunden pro Woche Videospiele.": 9
+  " Ich spiele 10 Stunden pro Woche Videospiele.": 10
+  " Ich spiele 15 Stunden pro Woche Videospiele.": 15
+  " Ich spiele 20 Stunden pro Woche Videospiele.": 20
+  " Ich spiele 24 Stunden pro Woche Videospiele.": 24
+  " Ich spiele 25 Stunden pro Woche Videospiele.": 25
+  " Ich spiele 30 Stunden pro Woche Videospiele.": 30
+  " Ich spiele 70 Stunden pro Woche Videospiele.": 70
+  " Ich spiele 78 Stunden pro Woche Videospiele.": 78
+  " Ich spiele 120 Stunden pro Woche Videospiele.": 120
+  " Ich spiele 9999999999999 Stunden pro Woche Videospiele.": "Spam"
+  " Ich spiele 0,5 Stunden pro Woche Videospiele.": 0.5
+  " Ich spiele .0 Stunden pro Woche Videospiele.": 0
+  " Ich spiele 24/7 Stunden pro Woche Videospiele.": 168
+  " Ich spiele min. 20 Stunden pro Woche Videospiele.": 20
 
   # Invalid / unclear / spam entries
-  "Ich spiele vollzeit Stunden pro Woche Videospiele.": "Invalid"
-  "Ich spiele keine Stunden pro Woche Videospiele.": 0
-  "Ich spiele nie Stunden pro Woche Videospiele.": 0
-  "Ich spiele gar nicht Stunden pro Woche Videospiele.": 0
-  "Ich spiele nicht Stunden pro Woche Videospiele.": 0
-  "Ich spiele nichts Stunden pro Woche Videospiele.": 0
-  "Ich spiele jerkmate unreal 1.93cm btw Stunden pro Woche Videospiele.": "Spam"
+  " Ich spiele vollzeit Stunden pro Woche Videospiele.": "Invalid"
+  " Ich spiele jerkmate unreal 1.93cm btw Stunden pro Woche Videospiele.": "Spam"
 
   # Sliders
   "1.Stimme überhaupt nicht zu": "1.Strongly disagree"

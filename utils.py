@@ -121,6 +121,55 @@ def clean_duplicated_json(data_dir, pattern):
     print("Finished processing and deleting matching files.")
 
 
+import os
+import re
+
+import pandas as pd
+
+
+def remove_json_files_with_test_value_from_index(
+    df: pd.DataFrame, directory: str, exact_match: bool = False
+):
+    """
+    Removes JSON files from a directory whose filenames contain IDs present
+    in the DataFrame index, where the corresponding row contains 'Test'
+    in any column.
+
+    Parameters:
+        df (pd.DataFrame): The DataFrame (IDs must be in the index).
+        directory (str): Path to the directory containing JSON files.
+        exact_match (bool): Whether to match exact value "Test" or allow partial.
+    """
+    # Step 1: Identify rows where any column contains "Test"
+    if exact_match:
+        mask = df.isin(["Test"])
+    else:
+        mask = df.astype(str).apply(
+            lambda row: row.str.contains("Test", case=False, na=False), axis=1
+        )
+
+    matching_ids = df.index[mask.any(axis=1)].astype(str).tolist()
+
+    # Step 2: Delete matching files
+    for filename in os.listdir(directory):
+        if not filename.endswith(".json"):
+            continue
+        for file_id in matching_ids:
+            if re.search(rf"{re.escape(file_id)}", filename):
+                file_path = os.path.join(directory, filename)
+                try:
+                    os.remove(file_path)
+                    print(f"Removed: {file_path}")
+                except Exception as e:
+                    print(f"Failed to remove {file_path}: {e}")
+                break  # Avoid multiple deletions for same file
+
+
+#################
+#    Reports    #
+#################
+
+
 def generate_columnwise_unique_report(
     df: pd.DataFrame, output_path: str = "unique_values_columnwise.html"
 ) -> str:
@@ -218,4 +267,4 @@ def render_mapping_dict_to_html(
     """
 
     Path(output_path).write_text(html, encoding="utf-8")
-    print(f"✅ HTML report saved to {output_path}")
+    print(f"{output_path}")
