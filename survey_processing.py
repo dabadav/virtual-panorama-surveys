@@ -1,38 +1,52 @@
 # %%
-from pathlib import Path
-import pandas as pd
 import sys
-sys.path.append('..')
-from utils import load_json_files, extract_id_files, match_files, load_json, load_yaml
+from pathlib import Path
+
+import pandas as pd
+
+sys.path.append("..")
+from utils import extract_id_files, load_json_files, load_yaml
 
 # %%
-data_dir = Path("../data/Bergen-Belsen-Full-Data/LogsBergenBelsen")
-pattern = 'Log_Survey*.json'  # Survey files pattern
-output_directory = Path('data/')
-output_filename = 'Log_Survey.csv'
+data_dir = Path("../data/LogsBergenBelsen")
+pattern = "Log_Survey*.json"  # Survey files pattern
+output_directory = Path("data/")
+output_filename = "Log_Survey.csv"
 
 # Load JSONs into Pandas df
 survey = load_json_files(data_dir, pattern)
 visitor_ids = extract_id_files(data_dir, pattern)
-survey_tables = [pd.json_normalize(s, sep='_') for s in survey]
-df_survey = pd.DataFrame({f"df_{i}": df["answer"] for i, df in enumerate(survey_tables)})
+survey_tables = [pd.json_normalize(s, sep="_") for s in survey]
+df_survey = pd.DataFrame(
+    {f"df_{i}": df["answer"] for i, df in enumerate(survey_tables)}
+)
 df_survey.columns = visitor_ids
-df_survey.index = survey_tables[100]['question'] # English questions
+df_survey.index = survey_tables[100]["question"]  # English questions
 
-# Save 
-df_survey.T.to_csv(output_directory / output_filename)
-
-# %%
+# Save
 df_survey = df_survey.T
 
-# Mapping dicts
-mapping_questions = load_yaml('mapping_questions.yaml')['mapping_questions']
-mapping_country = load_yaml('mapping_country.yaml')['mapping_country']
-
-# Normalization
+# Rename columns
+mapping_questions = load_yaml("mapping_questions.yaml")["mapping_questions"]
 df_survey.columns = df_survey.columns.map(mapping_questions)
+df_survey.to_csv(output_directory / output_filename)
 
-df_survey['nationality'] = df_survey['nationality'].map(mapping_country)
-df_survey = df_survey[df_survey['nationality'] != 'Testing']
-# Translation
+# %%
+from utils import generate_columnwise_unique_report
+
+generate_columnwise_unique_report(df_survey)
+
+# %%
+# Mapping dicts
+mapping_response = load_yaml("mapping_response.yaml")["mapping_response"]
+df_survey_translated = df_survey.replace(mapping_response)
+
+# %%
+df_survey_translated.to_csv(output_directory / "Log_Survey_Translated.csv")
+
+# %%
+from utils import load_yaml, render_mapping_dict_to_html
+
+mapping_response = load_yaml("mapping_response.yaml")["mapping_response"]
+render_mapping_dict_to_html(mapping_response)
 # %%

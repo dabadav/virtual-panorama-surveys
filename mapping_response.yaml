@@ -1,0 +1,394 @@
+mapping_response:
+  germany: Germany
+  german: Germany
+  deutsch: Germany
+  deutschland: Germany
+  Deutsch: Germany
+  DEUTSCH: Germany
+  DEU: Germany
+  DEUTSCH : Germany
+  de: Germany
+  detsch: Germany
+  deusch: Germany
+  deutsche: Germany
+  Dd: Germany
+  Deuts: Germany
+  " german": Germany
+  polen: Poland
+  Polen: Poland
+  polish: Poland
+  irish: Ireland
+  british: United Kingdom
+  british : United Kingdom
+  english: United Kingdom
+  Scottish: United Kingdom
+  french: France
+  france: France
+  spanish: Spain
+  dutch: Netherlands
+  netherlands: Netherlands
+  nederlands: Netherlands
+  niederlande: Netherlands
+  swedish: Sweden
+  danish: Denmark
+  mexican: Mexico
+  iran: Iran
+  turkish: Turkey
+  türkisch: Turkey
+  türken: Turkey
+  hebreisch: Israel
+  israeli: Israel
+  afghaner: Afghanistan
+  afrikaNisch: Africa
+  afrikanisch: Africa
+  brasilianisch: Brazil
+  ukraine: Ukraine
+  czech: Czech Republic
+  portugal: Portugal
+  pakistani: Pakistan
+  romanian: Romania
+  us: United States
+  nepal: Nepal
+
+  Admjn: Test
+  admin: Test
+  Admin: Test
+
+  morgen : Spam
+  penis: Spam
+  Flackenhorster: Spam
+
+  # Gender
+  Female: Female
+  Weiblich: Female
+  Male: Male
+  Männlich: Male
+  Möchte dies nicht benennen: Prefer not to say
+  Prefer not to say: Prefer not to say
+
+  Andere_Mettwurst: Spam
+  Andere_Hund: Spam
+  Andere_helikopter: Spam
+  Andere_affe: Spam
+  Andere_Pommespanzer: Spam
+  Andere_: Spam
+
+  # Age
+  "Jünger als 16": "Under 16"
+  "Younger than 16": "Under 16"
+  "16-18": "16–18"
+  "18-24": "18–24"
+  "25-34": "25–34"
+  "35-44": "35–44"
+  "45-54": "45–54"
+  "55-64": "55–64"
+  "65-74": "65–74"
+  "75-84": "75–84"
+  "85+": "85+"
+
+  # Education
+  "Primary/Secondary school": "Secondary school"
+  "Weiterführende Schule": "Secondary school"
+  "High school (gymnasium)": "High school"
+  "Gymnasium": "High school"
+
+  "Berufsausbildung oder Lehre": "Vocational training or apprenticeship"
+  "Vocational training apprenticeship": "Vocational training or apprenticeship"
+
+  "Bachelor-Abschluss": "Bachelor's degree"
+  "Bachelor's degree": "Bachelor's degree"
+
+  "Master-Abschluss": "Master's degree"
+  "Master's degree": "Master's degree"
+
+  "Promotion": "Doctorate"
+  "Doctorate": "Doctorate"
+
+  # Visit Type
+  "Als Schüler*in/Student*in mit meiner Gruppe": "As a student with my group"
+  "As a student with my peers": "As a student with my group"
+
+  "Allein": "Alone"
+  "Alone": "Alone"
+
+  "Als Erwachsener mit anderen Erwachsenen": "As an adult with other adults"
+  "As an adult with other adults": "As an adult with other adults"
+  "Andere_mit mann": "As an adult with other adults"
+
+  "Als Erwachsener mit Kindern": "As an adult with children"
+  "As an adult with children": "As an adult with children"
+
+  "Other_as a kid with my parents": "As a kid with my parents"
+
+  "Andere_": "Other"
+  "Other_": "Spam"
+  "Andere_mit mein vati": "Other"
+  "Andere_vater": "Other"
+  "Andere_Teanerin ver.di": "Other"
+  "Andere_Bundeswehr": "Other"
+  "Other_mutter und schwägerin": "Other"
+
+  "Andere_Heli": "Spam"
+  "Andere_mit meinem  panzer": "Spam"
+  "Andere_akatan": "Spam"
+
+  # Visit Purpose
+  "Um mehr über die Geschichte zu erfahren": "To learn more about the history"
+  "To learn more about the history": "To learn more about the history"
+
+  "Zum Gedenken": "For commemoration"
+  "For commemoration": "For commemoration"
+
+  "Für die Forschung": "For research"
+  "For research": "For research"
+
+  "Andere": "Other"
+  "To learn more about the history_Other": "To learn more about the history__Other"
+  "Um mehr über die Geschichte zu erfahren_Andere": "To learn more about the history__Other"
+  "Zum Gedenken_Andere": "For commemoration__Other"
+  "Um mehr über die Geschichte zu erfahren_Zum Gedenken_Andere": "To learn more about the history__For commemoration__Other"
+
+  "Um mehr über die Geschichte zu erfahren_Für die Forschung": "To learn more about the history__For research"
+  "Um mehr über die Geschichte zu erfahren_Zum Gedenken": "To learn more about the history__For commemoration"
+  "To learn more about the history_For research": "To learn more about the history__For research"
+  "To learn more about the history_For commemoration": "To learn more about the history__For commemoration"
+  "To learn more about the history_For commemoration_For research": "To learn more about the history__For commemoration__For research"
+
+  "Um mehr über die Geschichte zu erfahren_Zum Gedenken_Für die Forschung": "To learn more about the history__For commemoration__For research"
+  "Um mehr über die Geschichte zu erfahren_Zum Gedenken_Für die Forschung_Andere": "To learn more about the history__For commemoration__For research__Other"
+  "Um mehr über die Geschichte zu erfahren_Für die Forschung_Andere": "To learn more about the history__For research__Other"
+
+  # Religious
+  "Ja": "Yes"
+  "Yes": "Yes"
+  "No": "No"
+  "NEIN": "No"
+  "Ich weiß nicht": "I don't know"
+  "I don't know": "I don't know"
+
+  # Political Identity
+  "1.Ganz links": "1.Far left"
+  "1.Far left": "1.Far left"
+
+  "2.Links von der Mitte": "2.Left of centre"
+  "2.Left of centre": "2.Left of centre"
+
+  "3.Mitte": "3.Centre"
+  "3.Mitte ": "3.Centre"
+  "3.Centre": "3.Centre"
+
+  "4.Rechts von der Mitte": "4.Right of centre"
+  "4.Right of centre": "4.Right of centre"
+
+  "5.Ganz rechts": "5.Far right"
+  "5.Far right": "5.Far right"
+
+  "N/A": "NA"
+
+  # Visit Memorial
+  "Ja, schon einmal": "Yes, once before"
+  "Yes, once before": "Yes, once before"
+
+  "Ja, mehr als einmal zuvor": "Yes, more than once before"
+  "Yes, more than once before": "Yes, more than once before"
+
+  # Personal Connection - Details
+  "Ich bin ein Überlebender der Nazi-Verfolgung": "I am a survivor of Nazi persecution"
+
+  "Ich habe Verwandte, Vorfahren, Freunde oder Bekannte, die:_verfolgt wurden": "Relatives were persecuted"
+  "I have relatives, ancestors, friends or acquaintances who:_were persecuted": "Relatives were persecuted"
+
+  "Ich habe Verwandte, Vorfahren, Freunde oder Bekannte, die:_verfolgt wurden_zu den Tätern gehörten": "Relatives were persecuted__Relatives were perpetrators"
+  "I have relatives, ancestors, friends or acquaintances who:_were persecuted_were in the resistance against the Nazis": "Relatives were persecuted__Relatives were in the resistance"
+  "Ich habe Verwandte, Vorfahren, Freunde oder Bekannte, die:_zu den Tätern gehörten": "Relatives were perpetrators"
+  "I have relatives, ancestors, friends or acquaintances who:_were in the resistance against the Nazis": "Relatives were in the resistance"
+
+  "Ich habe Verwandte, Vorfahren, Freunde oder Bekannte, die:_Teil der alliierten Streitkräfte waren": "Relatives were part of the allied forces"
+  "I have relatives, ancestors, friends or acquaintances who:_were part of the allied forces": "Relatives were part of the allied forces"
+
+  "Andere_Vorfahren wurden vetrieben": "Ancestors were displaced"
+
+  "Other_parnts were here": "Other"
+  "Andere_": "Other"
+  "Other_": "Other"
+
+  "Andere_ich bin täter": "Spam"
+
+  "Ich habe Verwandte, Vorfahren, Freunde oder Bekannte, die:": "Unspecified"
+  "I have relatives, ancestors, friends or acquaintances who:": "Unspecified"
+
+  "Den Grund möchte ich nicht nennen": "Prefer not to say"
+  "I do not want to reveal the reason.": "Prefer not to say"
+
+  # Knowledge
+  "1.Überhaupt nicht": "1.Not at all"
+  "1.Nothing at all": "1.Not at all"
+
+  "2.Sehr wenig": "2.Very little"
+  "2.Very little": "2.Very little"
+
+  "3.Etwas": "3.Somewhat"
+  "3.Somewhat": "3.Somewhat"
+
+  "4.Mehr als der Durchschnitt": "4.More than average"
+  "4.More than average": "4.More than average"
+
+  "5.Sehr viel": "5.Very much"
+  "5.A lot": "5.Very much"
+
+  "N/A": "NA"
+
+  # Persecuted group
+  "Admin": "Test"
+  "admin": "Test"
+  "admjn": "Test"
+
+  "10": "Test"
+  "dd": "Test"
+  "No Ahnung": "Spam"
+  "ausschwitz": "Spam"
+  "Hunde und Katzen": "Spam"
+  "weisse Rose": "Other"
+
+  "No Ahnung": "Spam"
+  "ausschwitz": "Spam"
+  "Hunde und Katzen": "Spam"
+  "weisse Rose": "Other"
+  "herkunft, juden, behindert": "Jews__Disabled people"
+  "resistants": "Other"
+
+  "ss": "SS"
+  "SS": "SS"
+  "SS, SA": "SS__SA"
+  "ss wehrmacht": "SS__Wehrmacht"
+  "schulsturm theoretisch ss": "SS"
+
+  "Juden": "Jews"
+  "juden": "Jews"
+  "jews": "Jews"
+  "jew": "Jews"
+  "joden": "Jews"
+  "jewish": "Jews"
+  "Jüd*innen": "Jews"
+  "juden, ...": "Jews"
+
+  "Sinti Roma Juden Politische Gegner": "Sinti and Roma__Jews__Political opponents"
+  "Sinti und Roma, Juden, Homosexuele, Menschen mit Handycap": "Sinti and Roma__Jews__Homosexuals__Disabled people"
+  "Juden, Homosexuelle, Sinti&Roma, Behinderte": "Jews__Homosexuals__Sinti and Roma__Disabled people"
+  "juden, andere politidche meinung, sinti und roma, homosexuelle, behinderte": "Jews__Political opponents__Sinti and Roma__Homosexuals__Disabled people"
+  "Homosxuelle, Juden, Sint und Roma, Behinderte": "Homosexuals__Jews__Sinti and Roma__Disabled people"
+  "juden schwule": "Jews__Homosexuals"
+  "Juden, Sinti u. Roma, Homosexuelle, polit. Gegner, Behinderte": "Jews__Sinti and Roma__Homosexuals__Political opponents__Disabled people"
+  "sinti, roma, Homosexuelle, 'asoziale', behinderte, psychisch kranke, Osteuropaeische Personeb, politische Gegner.innen, Kommunisten, kuenstler (entartete kunst), Schwarze, BIPOC": "Sinti and Roma__Homosexuals__Asocials__Disabled people__Mentally ill__Eastern Europeans__Political opponents__Communists__Artists__Black people__BIPOC"
+  "juden homosexuelle politische gegner": "Jews__Homosexuals__Political opponents"
+  "Juden, Sinti und Roma, Homosexuelle,Menschen mit Behinderung": "Jews__Sinti and Roma__Homosexuals__Disabled people"
+  "Juden, Homos, Sinti, roma, politisch-andersdenkende u.v.m.": "Jews__Homosexuals__Sinti and Roma__Political opponents"
+  "jews, homosexuals, jehovas, roms and sinti, disabilities persons": "Jews__Homosexuals__Jehovah's Witnesses__Sinti and Roma__Disabled people"
+  "Juden, politische Oppositionelle, Sinti, Roma, etc.": "Jews__Political opponents__Sinti and Roma"
+  "Juden, Homosexuelle, kommunisten, Roma und Sinti, Behinderte": "Jews__Homosexuals__Communists__Sinti and Roma__Disabled people"
+  "juden, homosexuelle,anders denkende": "Jews__Homosexuals__Political opponents"
+  "roma, sinti, homosexuals, jehovah's witness": "Sinti and Roma__Homosexuals__Jehovah's Witnesses"
+  "jews communists blacks gays gypsy disabled etc": "Jews__Communists__Black people__Homosexuals__Sinti and Roma__Disabled people"
+  "jewish, homosexuell, sinti and roma, asocial people": "Jews__Homosexuals__Sinti and Roma__Asocials"
+  "Juden, Behinderte, Sinti und Roma": "Jews__Disabled people__Sinti and Roma"
+  "Homosexuals,jews,gypsies and political rivals": "Homosexuals__Jews__Sinti and Roma__Political opponents"
+  "ss, sa, dgpol": "SS__SA__Political opponents"
+  "Juden, Homosexuelle, Kommunisten, sinti und roma, politisch anders denkende,": "Jews__Homosexuals__Communists__Sinti and Roma__Political opponents"
+  "juden, nicht arische, sinti und roma, behinderte": "Jews__Non-Aryans__Sinti and Roma__Disabled people"
+  "sinti,roma,juden,zeugen jehovas,homosexuelle,asoziale,berufsverbrecher,geistig und koerperlich behinderte,kommunisten,sozialisten": "Sinti and Roma__Jews__Jehovah's Witnesses__Homosexuals__Asocials__Career criminals__Mentally ill__Disabled people__Communists__Socialists"
+  "Roma, Juden, Farbige": "Sinti and Roma__Jews__Black people"
+  "Juden, Homosexuelle,Sinti und Roma, Zeugen Jehovas": "Jews__Homosexuals__Sinti and Roma__Jehovah's Witnesses"
+  "Lgtbi, Judes, Romanianpeople, discapacity minorist": "LGBTQ+__Jews__Romanians__Disabled people"
+  "tzigane homosexual disable people soviet": "Sinti and Roma__Homosexuals__Disabled people__Soviets"
+  "disabled, socialists, gay,jews, roma and sinti, union leaders, some priests": "Disabled people__Socialists__Homosexuals__Jews__Sinti and Roma__Union leaders__Priests"
+  "joden zigeuners": "Jews__Sinti and Roma"
+  "sinti u roma, homosexuelle, asoziale, juden, zeugen jehovas, kommunisten, politischd oppositionek": "Sinti and Roma__Homosexuals__Asocials__Jews__Jehovah's Witnesses__Communists__Political opponents"
+  "sinti und roma": "Sinti and Roma"
+  "Kommunisten": "Communists"
+  "jew, communist, homosexual": "Jews__Communists__Homosexuals"
+  "Roma,Sinti,Juden, Homosexuelle, politische, Sozialdemokraten etc": "Sinti and Roma__Jews__Homosexuals__Political opponents__Social Democrats"
+  "juden sinti krankenleuten": "Jews__Sinti and Roma__Disabled people"
+  "juden, homosexuelle, politisch andersvgesinnte, sinthi roma": "Jews__Homosexuals__Political opponents__Sinti and Roma"
+  "juden,Gleichgesinte paare": "Jews__Same-sex couples"
+  "juden, zeugen johovas, homosexuele, kranke, behinderte": "Jews__Jehovah's Witnesses__Homosexuals__Sick people__Disabled people"
+
+  # Tech
+  "Virtual Reality (VR)": "Virtual Reality (VR)"
+  "3D model viewer": "3D model viewer"
+  "Virtual Reality (VR)_3D model viewer": "Virtual Reality (VR)__3D model viewer"
+  "Augmented Reality (AR)": "Augmented Reality (AR)"
+  "Augmented Reality (AR)_Virtual Reality (VR)": "Augmented Reality (AR)__Virtual Reality (VR)"
+  "Augmented Reality (AR)_Virtual Reality (VR)_3D model viewer": "Augmented Reality (AR)__Virtual Reality (VR)__3D model viewer"
+
+  # Videogames
+  "I play video games 0 hours per week.": 0
+  "I play video games 2 hours per week.": 2
+  "I play video games 3 hours per week.": 3
+  "I play video games 5 hours per week.": 5
+  "I play video games 10 hours per week.": 10
+  "I play video games 25 hours per week.": 25
+  "I play video games 120 hours per week.": 120
+  "I play video games 0.5 hours per week.": 0.5
+  "I play video games no hours per week.": 0
+  "I play video games d hours per week.": "Invalid"
+
+  "Ich spiele 0 Stunden pro Woche Videospiele.": 0
+  "Ich spiele 1 Stunden pro Woche Videospiele.": 1
+  "Ich spiele 2 Stunden pro Woche Videospiele.": 2
+  "Ich spiele 3 Stunden pro Woche Videospiele.": 3
+  "Ich spiele 4 Stunden pro Woche Videospiele.": 4
+  "Ich spiele 5 Stunden pro Woche Videospiele.": 5
+  "Ich spiele 8 Stunden pro Woche Videospiele.": 8
+  "Ich spiele 9 Stunden pro Woche Videospiele.": 9
+  "Ich spiele 10 Stunden pro Woche Videospiele.": 10
+  "Ich spiele 15 Stunden pro Woche Videospiele.": 15
+  "Ich spiele 20 Stunden pro Woche Videospiele.": 20
+  "Ich spiele 24 Stunden pro Woche Videospiele.": 24
+  "Ich spiele 25 Stunden pro Woche Videospiele.": 25
+  "Ich spiele 30 Stunden pro Woche Videospiele.": 30
+  "Ich spiele 70 Stunden pro Woche Videospiele.": 70
+  "Ich spiele 78 Stunden pro Woche Videospiele.": 78
+  "Ich spiele 120 Stunden pro Woche Videospiele.": 120
+  "Ich spiele 9999999999999 Stunden pro Woche Videospiele.": "Spam"
+  "Ich spiele 0,5 Stunden pro Woche Videospiele.": 0.5
+  "Ich spiele .0 Stunden pro Woche Videospiele.": 0
+  "Ich spiele 24/7 Stunden pro Woche Videospiele.": 168
+  "Ich spiele min. 20 Stunden pro Woche Videospiele.": 20
+
+  # Invalid / unclear / spam entries
+  "Ich spiele vollzeit Stunden pro Woche Videospiele.": "Invalid"
+  "Ich spiele keine Stunden pro Woche Videospiele.": 0
+  "Ich spiele nie Stunden pro Woche Videospiele.": 0
+  "Ich spiele gar nicht Stunden pro Woche Videospiele.": 0
+  "Ich spiele nicht Stunden pro Woche Videospiele.": 0
+  "Ich spiele nichts Stunden pro Woche Videospiele.": 0
+  "Ich spiele jerkmate unreal 1.93cm btw Stunden pro Woche Videospiele.": "Spam"
+
+  # Sliders
+  "1.Stimme überhaupt nicht zu": "1.Strongly disagree"
+  "1.Totally disagree": "1.Strongly disagree"
+
+  "2.Verschiedener Meinung sein": "2.Disagree"
+
+  "3.Unentschieden": "3.Undecided"
+  "3.Undecided": "3.Undecided"
+
+  "4.Zustimmen": "4.Agree"
+  "4.Agree": "4.Agree"
+
+  "5.Stimme völlig zu": "5.Strongly agree"
+  "5.Strongly agree": "5.Strongly agree"
+
+  "N/A": "NA"
+
+  # Feedback
+  "Admin Aliisa": "Test"
+  "admin": "Test"
+  "admjn": "Test"
+  "fs": "Spam"
+  "hktler": "Spam"
+  "rewrw": "Spam"
+  "die": "Spam"
+
+  "naja... etwas hakelig zu bedienen. wenn es das online gibt, probiere ichnes von zu hause noc mal.":
+    "Usability comment: somewhat tricky to use, would retry online"

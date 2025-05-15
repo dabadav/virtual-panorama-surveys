@@ -30,8 +30,8 @@ mapping_questions:
   '28.Gave me an impression of how the camp worked': understood_camp_function
   '29.Made me feel sympathetic towards the victims of Nazi persecution': felt_sympathetic_to_victims
   '30.Impacted my view on my own life': impact_on_own_life
-  '31.Impacted my view on today’s society': impact_on_society
-  '32.How did it impact your view on today’s society?: (optional)': impact_society_details
+  '31.Impacted my view on today�s society': impact_on_society
+  '32.How did it impact your view on today�s society?: (optional)': impact_society_details
   '33.I feel like I want to share what I learnt with my family / friends / colleagues': want_to_share_learning
   '34.Because of the exploration, I plan to learn more about the history of Nazi persecution': plan_to_learn_more
   '35.Is there anything else you would like to share with us about the presentation and what you thought of it?: (optional)': additional_feedback
