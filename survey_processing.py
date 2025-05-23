@@ -1,7 +1,6 @@
 # %%
 import sys
 from pathlib import Path
-
 import pandas as pd
 
 sys.path.append("..")
@@ -21,9 +20,10 @@ survey_tables = [pd.json_normalize(s, sep="_") for s in survey]
 df_survey = pd.DataFrame(
     {f"df_{i}": df["answer"] for i, df in enumerate(survey_tables)}
 )
-df_survey.columns = visitor_ids
-df_survey.index = survey_tables[80]["question"]  # English questions
 
+df_survey.columns = visitor_ids
+questions = pd.read_csv("english_questions.csv")['question']
+df_survey.index = questions  # English questions
 # Save
 df_survey = df_survey.T
 
@@ -50,8 +50,18 @@ mapping_response = load_yaml("mapping_response.yaml")["mapping_response"]
 df_survey_translated = df_survey.replace(mapping_response)
 df_survey_translated.to_csv(output_directory / "Log_Survey_Translated.csv")
 
-generate_columnwise_unique_report(
-    df_survey_translated, output_path="reports/unique_values_translated.html"
-)
+# generate_columnwise_unique_report(
+    # df_survey_translated, output_path="reports/unique_values_translated.html"
+# )
 
 # %%
+########## Remove Non answered - No survey
+df_unique = df_survey_translated[~df_survey_translated.duplicated(keep=False)]
+df_unique.to_csv(output_directory / "Log_Survey_Processed.csv")
+
+
+
+# %%
+from utils import generate_columnwise_unique_report
+
+generate_columnwise_unique_report(df_survey_translated, output_path="reports/unique_answers.html")

@@ -90,6 +90,7 @@ def extract_id_files(data_dir, pattern="Log_Survey_BB_*.json"):
 #################
 
 import os
+import re
 import webbrowser
 from datetime import datetime
 from pathlib import Path
@@ -97,7 +98,6 @@ from urllib.request import pathname2url
 
 import pandas as pd
 from IPython.display import HTML, display
-
 
 def clean_duplicated_json(data_dir, pattern):
     files_info = []
@@ -119,13 +119,6 @@ def clean_duplicated_json(data_dir, pattern):
             os.remove(file)
 
     print("Finished processing and deleting matching files.")
-
-
-import os
-import re
-
-import pandas as pd
-
 
 def remove_json_files_with_test_value_from_index(
     df: pd.DataFrame, directory: str, exact_match: bool = False
@@ -168,7 +161,6 @@ def remove_json_files_with_test_value_from_index(
 #################
 #    Reports    #
 #################
-
 
 def generate_columnwise_unique_report(
     df: pd.DataFrame, output_path: str = "unique_values_columnwise.html"
@@ -229,7 +221,6 @@ def generate_columnwise_unique_report(
 
     return output_path
 
-
 def render_mapping_dict_to_html(
     mapping: dict,
     title: str = "Mapping Overview",
@@ -268,3 +259,100 @@ def render_mapping_dict_to_html(
 
     Path(output_path).write_text(html, encoding="utf-8")
     print(f"{output_path}")
+
+from pathlib import Path
+from bs4 import BeautifulSoup
+import re
+
+def combine_html(file_info, output_path="combined_tabs.html"):
+    """
+    Combine multiple HTML files into one fullscreen tabbed HTML page, preserving styles.
+
+    Parameters:
+    - file_info: List of tuples (filepath, tab_name)
+    - output_path: Path to save the combined HTML output
+    """
+    contents = []
+    styles = []
+    tab_ids = []
+
+    for i, (path, tab_name) in enumerate(file_info):
+        with open(path, "r", encoding="utf-8") as f:
+            html = f.read()
+
+        # Extract styles from <style> or <link> tags
+        styles += re.findall(r"<style.*?>.*?</style>", html, flags=re.DOTALL | re.IGNORECASE)
+        styles += re.findall(r'<link[^>]+rel=["\']stylesheet["\'][^>]*>', html, flags=re.IGNORECASE)
+
+        # Extract body content
+        body_match = re.search(r"<body[^>]*>(.*?)</body>", html, flags=re.DOTALL | re.IGNORECASE)
+        body = body_match.group(1).strip() if body_match else html.strip()
+
+        tab_id = f"tab{i}"
+        tab_ids.append((tab_name, tab_id))
+        contents.append((tab_id, body))
+
+    # Combined HTML template
+    combined_html = f"""<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Combined HTML with Tabs</title>
+    {"".join(styles)}
+    <style>
+        html, body {{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }}
+        .tabbar {{
+            display: flex;
+            background-color: #333;
+        }}
+        .tablink {{
+            flex: 1;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 14px 0;
+            cursor: pointer;
+            font-size: 16px;
+        }}
+        .tablink:hover {{
+            background-color: #575757;
+        }}
+        .tabcontent {{
+            display: none;
+            height: calc(100vh - 48px);
+            overflow-y: auto;
+            padding: 0;
+            box-sizing: border-box;
+        }}
+        .tabcontent.active {{
+            display: block !important;
+        }}
+    </style>
+</head>
+<body>
+    <div class="tabbar">
+        {"".join(f'<button class="tablink" onclick="showTab(\'{tab_id}\')">{label}</button>' for label, tab_id in tab_ids)}
+    </div>
+    {"".join(f'<div id="{tab_id}" class="tabcontent{" active" if i == 0 else ""}">{content}</div>' for i, (tab_id, content) in enumerate(contents))}
+    <script>
+        function showTab(tabId) {{
+            var tabs = document.getElementsByClassName('tabcontent');
+            for (var i = 0; i < tabs.length; i++) {{
+                tabs[i].classList.remove('active');
+            }}
+            document.getElementById(tabId).classList.add('active');
+        }}
+    </script>
+</body>
+</html>
+"""
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(combined_html)
+
+    return output_path

@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Persona Survey Mapping Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; background: #f4f6f9; }
+        .container { display: flex; flex-wrap: wrap; gap: 30px; justify-content: flex-start; }
+        .persona {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 600px;
+            padding: 16px 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+        .persona h2 {
+            font-size: 1.2em;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 1em;
+        }
+        table {
+            width: 100%;
+            border-spacing: 0;
+        }
+        td {
+            padding: 6px 0;
+            vertical-align: top;
+        }
+        .label {
+            font-weight: bold;
+            width: 45%;
+            color: #444;
+        }
+        .value {
+            width: 55%;
+        }
+        .pill {
+            display: inline-block;
+            background-color: #e0ecf8;
+            color: #2c3e50;
+            padding: 4px 8px;
+            margin: 2px 4px 2px 0;
+            font-size: 0.85em;
+            border-radius: 10px;
+        }
+        .survey-label {
+            font-style: italic;
+            color: #1a73e8;
+            font-size: 0.85em;
+            display: inline-block;
+        }
+        .tr-tight td {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 1em;
+            color: #333;
+        }
+        tbody.row-group {
+            border-top: 2px solid #ccc;
+            margin-top: 8px;
+        }
+        tbody.row-group:first-of-type {
+            border-top: none;
+        }
+        tr.tr-tight td {
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mapping Survey Respondents to User Personas</h1>
+    <div class="container">
+    
+        <div class="persona">
+            <h2>School Student</h2>
+            <table>
+                <tbody class="row-group">
+                    <tr>
+                        <td class="label">Age</td>
+                        <td class="value">15–24 years old</td>
+                    </tr>
+                    
+                    <tr class="tr-tight">
+                        <td class="label"><span class="survey-label">age</span></td>
+                        <td class="value">
+                            
+                                <span class="pill">Under 16</span>
+                            
+                                <span class="pill">16–18</span>
+                            
+                                <span class="pill">18–24</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+
+                <tbody class="row-group">
+                    <tr>
+                        <td class="label">Engagement</td>
+                        <td class="value">Engage as part of academic curriculum, usually in groups with a teacher.</td>
+                    </tr>
+                    
+                    <tr class="tr-tight">
+                        <td class="label"><span class="survey-label">visit_type</span></td>
+                        <td class="value">
+                            
+                                <span class="pill">As a student with my group</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+
+                <tbody class="row-group">
+                    <tr>
+                        <td class="label">Content Preference</td>
+                        <td class="value">Prefers shorter, visually engaging content (images, videos, interactive maps).</td>
+                    </tr>
+                    
+                    <tr class="tr-tight">
+                        <td class="label"><span class="survey-label">content_type_interest</span></td>
+                        <td class="value">
+                            
+                                <span class="pill">Interactive</span>
+                            
+                                <span class="pill">Visual</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+
+                <tbody class="row-group">
+                    <tr>
+                        <td class="label">Goals</td>
+                        <td class="value">Educational goals—gaining knowledge and fulfilling academic requirements.</td>
+                    </tr>
+                    
+                    <tr class="tr-tight">
+                        <td class="label"><span class="survey-label">visit_purpose</span></td>
+                        <td class="value">
+                            
+                                <span class="pill">To learn more about the history</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="persona">
+            <h2>Touristic Visitor</h2>
+            <table>
+                <tbody class="row-group">
+                    <tr>
+                        <td class="label">Age</td>
+                        <td class="value">30–70 years old</td>
+                    </tr>
+                    
+                    <tr class="tr-tight">
+                        <td class="label"><span class="survey-label">age</span></td>
+                        <td class="value">
+                            
+                                <span class="pill">25–34</span>
+                            
+                                <span class="pill">35–44</span>
+                            
+                                <span class="pill">45–54</span>
+                            
+                                <span class="pill">55–64</span>
+                            
+                                <span class="pill">65–74</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+
+                <tbody class="row-group">
+                    <tr>
+                        <td class="label">Engagement</td>
+                        <td class="value">Visits for cultural enrichment, often with family during physical tours.</td>
+                    </tr>
+                    
+                    <tr class="tr-tight">
+                        <td class="label"><span class="survey-label">visit_type</span></td>
+                        <td class="value">
+                            
+                                <span class="pill">As an adult with other adults</span>
+                            
+                                <span class="pill">As an adult with children</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+
+                <tbody class="row-group">
+                    <tr>
+                        <td class="label">Content Preference</td>
+                        <td class="value">Narrative-driven content, personal stories, multimedia formats.</td>
+                    </tr>
+                    
+                    <tr class="tr-tight">
+                        <td class="label"><span class="survey-label">content_type_interest</span></td>
+                        <td class="value">
+                            
+                                <span class="pill">Stories</span>
+                            
+                                <span class="pill">Documentaries</span>
+                            
+                                <span class="pill">Artifacts</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+
+                <tbody class="row-group">
+                    <tr>
+                        <td class="label">Goals</td>
+                        <td class="value">Cultural enrichment and developing a connection with the site.</td>
+                    </tr>
+                    
+                    <tr class="tr-tight">
+                        <td class="label"><span class="survey-label">visit_purpose</span></td>
+                        <td class="value">
+                            
+                                <span class="pill">To learn more about the history</span>
+                            
+                                <span class="pill">For commemoration</span>
+                            
+                                <span class="pill">Other</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="persona">
+            <h2>Personal Involvement</h2>
+            <table>
+                <tbody class="row-group">
+                    <tr>
+                        <td class="label">Age</td>
+                        <td class="value">25+ years old</td>
+                    </tr>
+                    
+                    <tr class="tr-tight">
+                        <td class="label"><span class="survey-label">age</span></td>
+                        <td class="value">
+                            
+                                <span class="pill">25–34</span>
+                            
+                                <span class="pill">35–44</span>
+                            
+                                <span class="pill">45–54</span>
+                            
+                                <span class="pill">55–64</span>
+                            
+                                <span class="pill">65–74</span>
+                            
+                                <span class="pill">75–84</span>
+                            
+                                <span class="pill">85+</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+
+                <tbody class="row-group">
+                    <tr>
+                        <td class="label">Engagement</td>
+                        <td class="value">Descendants of survivors exploring family or emotional history.</td>
+                    </tr>
+                    
+                    <tr class="tr-tight">
+                        <td class="label"><span class="survey-label">personal_connection_nazi_history</span></td>
+                        <td class="value">
+                            
+                                <span class="pill">Yes</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+
+                <tbody class="row-group">
+                    <tr>
+                        <td class="label">Content Preference</td>
+                        <td class="value">Testimonies, diaries, genealogical records, personal artifacts.</td>
+                    </tr>
+                    
+                    <tr class="tr-tight">
+                        <td class="label"><span class="survey-label">content_type_interest</span></td>
+                        <td class="value">
+                            
+                                <span class="pill">Family documents</span>
+                            
+                                <span class="pill">Testimonies</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+
+                <tbody class="row-group">
+                    <tr>
+                        <td class="label">Goals</td>
+                        <td class="value">Cultural enrichment and personal exploration.</td>
+                    </tr>
+                    
+                    <tr class="tr-tight">
+                        <td class="label"><span class="survey-label">visit_purpose</span></td>
+                        <td class="value">
+                            
+                                <span class="pill">For commemoration</span>
+                            
+                                <span class="pill">Other</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="persona">
+            <h2>Researcher</h2>
+            <table>
+                <tbody class="row-group">
+                    <tr>
+                        <td class="label">Age</td>
+                        <td class="value">Adults (no strict boundaries)</td>
+                    </tr>
+                    
+                    <tr class="tr-tight">
+                        <td class="label"><span class="survey-label">age</span></td>
+                        <td class="value">
+                            
+                                <span class="pill">18–24</span>
+                            
+                                <span class="pill">25–34</span>
+                            
+                                <span class="pill">35–44</span>
+                            
+                                <span class="pill">45–54</span>
+                            
+                                <span class="pill">55–64</span>
+                            
+                                <span class="pill">65–74</span>
+                            
+                                <span class="pill">75–84</span>
+                            
+                                <span class="pill">85+</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+
+                <tbody class="row-group">
+                    <tr>
+                        <td class="label">Engagement</td>
+                        <td class="value">Searches for data, documents, and testimonies for scholarly work.</td>
+                    </tr>
+                    
+                    <tr class="tr-tight">
+                        <td class="label"><span class="survey-label">interaction</span></td>
+                        <td class="value">
+                            
+                                <span class="pill">Reading</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+
+                <tbody class="row-group">
+                    <tr>
+                        <td class="label">Content Preference</td>
+                        <td class="value">Primary sources, metadata, datasets, advanced search.</td>
+                    </tr>
+                    
+                    <tr class="tr-tight">
+                        <td class="label"><span class="survey-label">content_type_interest</span></td>
+                        <td class="value">
+                            
+                                <span class="pill">Primary documents</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+
+                <tbody class="row-group">
+                    <tr>
+                        <td class="label">Goals</td>
+                        <td class="value">Detailed, academic exploration of specific topics.</td>
+                    </tr>
+                    
+                    <tr class="tr-tight">
+                        <td class="label"><span class="survey-label">visit_purpose</span></td>
+                        <td class="value">
+                            
+                                <span class="pill">For research</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+    </div>
+</body>
+</html>

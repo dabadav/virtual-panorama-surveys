@@ -162,6 +162,7 @@ mapping_response:
   "Ja": "Yes"
   "Yes": "Yes"
   "No": "No"
+  "no": "No"
   "NEIN": "No"
   "Ich weiß nicht": "I don't know"
   "I don't know": "I don't know"

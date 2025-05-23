@@ -1,0 +1,73 @@
+- name: School Student
+  age_group:
+    - "15–24 years old"
+    - 
+      - [age, ["Under 16", "16–18", "18–24"]]
+  engagement:
+    - "Engage as part of academic curriculum, usually in groups with a teacher."
+    - 
+      - [visit_type, ["As a student with my group"]]
+  content:
+    - "Prefers shorter, visually engaging content (images, videos, interactive maps)."
+    - 
+      - [content_type_interest, ["Interactive", "Visual"]]
+  goals:
+    - "Educational goals—gaining knowledge and fulfilling academic requirements."
+    - 
+      - [visit_purpose, ["To learn more about the history"]]
+
+- name: Touristic Visitor
+  age_group:
+    - "30–70 years old"
+    - 
+      - [age, ["25–34", "35–44", "45–54", "55–64", "65–74"]]
+  engagement:
+    - "Visits for cultural enrichment, often with family during physical tours."
+    - 
+      - [visit_type, ["Alone", "As an adult with other adults", "As an adult with children"]]
+      - [personal_connection_nazi_history, ["No"]]
+  content:
+    - "Narrative-driven content, personal stories, multimedia formats."
+    - 
+      - [content_type_interest, ["Stories", "Documentaries", "Artifacts"]]
+  goals:
+    - "Cultural enrichment and developing a connection with the site."
+    - 
+      - [visit_purpose, ["To learn more about the history", "For commemoration", "Other"]]
+
+- name: Personal Involvement
+  age_group:
+    - "25+ years old"
+    - 
+      - [age, ["25–34", "35–44", "45–54", "55–64", "65–74", "75–84", "85+"]]
+  engagement:
+    - "Descendants of survivors exploring family or emotional history."
+    - 
+      - [personal_connection_nazi_history, ["Yes"]]
+  content:
+    - "Testimonies, diaries, genealogical records, personal artifacts."
+    - 
+      - [content_type_interest, ["Family documents", "Testimonies"]]
+  goals:
+    - "Cultural enrichment and personal exploration."
+    - 
+      - [visit_purpose, ["For commemoration", "Other"]]
+
+- name: Researcher
+  age_group:
+    - "Adults (no strict boundaries)"
+    - 
+      - [age, ["18–24", "25–34", "35–44", "45–54", "55–64", "65–74", "75–84", "85+"]]
+  engagement:
+    - "Searches for data, documents, and testimonies for scholarly work."
+    - 
+      - [interaction, ["Reading"]]
+  content:
+    - "Primary sources, metadata, datasets, advanced search."
+    - 
+      - [content_type_interest, ["Primary documents"]]
+      - [educationl, [">High School"]]
+  goals:
+    - "Detailed, academic exploration of specific topics."
+    - 
+      - [visit_purpose, ["For research"]]

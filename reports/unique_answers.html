@@ -1,0 +1,516 @@
+
+    <html>
+    <head>
+        <style>
+            body { font-family: Arial; padding: 20px; }
+            table { border-collapse: collapse; }
+            td, th { border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left; }
+            th { background-color: #f2f2f2; }
+            button { margin: 10px 0; padding: 6px 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+            button:hover { background-color: #45a049; }
+            pre { background: #f8f8f8; padding: 10px; border: 1px solid #ccc; }
+        </style>
+        <script>
+            function copyText(id) {
+                var text = document.getElementById(id).innerText;
+                navigator.clipboard.writeText(text).then(function() {
+                    alert("Copied to clipboard!");
+                }, function(err) {
+                    alert("Failed to copy text: ", err);
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Unique Values Per Column</h1>
+        <table>
+            <tr><th>Column</th><th>Unique Values</th><th>Copy</th></tr>
+    
+            <tr>
+                <td><b>nationality</b></td>
+                <td><pre id="pre_0">Germany
+
+Czech Republic
+Spam
+Turkey
+Netherlands
+Portugal
+Africa
+United States
+Hebreisch
+United Kingdom
+France
+Israel
+Pakistan
+Spain
+Nepal
+Denmark
+Iran
+Mexico
+Afghaner
+Poland
+German
+Brazil
+Sweden
+Ukraine
+Ireland
+Romanian</pre></td>
+                <td><button onclick="copyText('pre_0')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>gender_identity</b></td>
+                <td><pre id="pre_1">Female
+
+Male
+Other
+Prefer not to say
+Spam</pre></td>
+                <td><button onclick="copyText('pre_1')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>age</b></td>
+                <td><pre id="pre_2">35–44
+
+16–18
+65–74
+85+
+45–54
+55–64
+18–24
+25–34
+Under 16
+75–84</pre></td>
+                <td><button onclick="copyText('pre_2')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>education_level</b></td>
+                <td><pre id="pre_3">Vocational training or apprenticeship
+
+Master's degree
+Bachelor's degree
+High school
+Secondary school
+Doctorate</pre></td>
+                <td><button onclick="copyText('pre_3')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>visit_type</b></td>
+                <td><pre id="pre_4">As an adult with other adults
+
+As an adult with children
+Alone
+As a student with my group
+Other
+Spam
+As a kid with my parents</pre></td>
+                <td><button onclick="copyText('pre_4')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>visit_purpose</b></td>
+                <td><pre id="pre_5">To learn more about the history
+
+For research
+For commemoration
+Other
+To learn more about the history__For commemoration
+To learn more about the history__For commemoration__For research__Other
+To learn more about the history__For commemoration__For research
+To learn more about the history__For research
+For commemoration_For research
+To learn more about the history__For research__Other
+To learn more about the history__Other
+To learn more about the history__For commemoration__Other
+For commemoration__Other</pre></td>
+                <td><button onclick="copyText('pre_5')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>religious</b></td>
+                <td><pre id="pre_6">No
+
+I don't know
+Yes</pre></td>
+                <td><button onclick="copyText('pre_6')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>political_identity</b></td>
+                <td><pre id="pre_7">2.Left of centre
+3.Centre
+5.Far right
+NA
+4.Right of centre
+1.Far left</pre></td>
+                <td><button onclick="copyText('pre_7')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>visited_memorial_before</b></td>
+                <td><pre id="pre_8">Yes, more than once before
+
+No
+Yes, once before</pre></td>
+                <td><button onclick="copyText('pre_8')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>personal_connection_nazi_history</b></td>
+                <td><pre id="pre_9">No
+
+Yes
+no</pre></td>
+                <td><button onclick="copyText('pre_9')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>personal_connection_details</b></td>
+                <td><pre id="pre_10">
+Prefer not to say
+Relatives were persecuted
+Relatives were perpetrators
+Relatives were persecuted__Relatives were perpetrators
+Other
+I am a survivor of Nazi persecution
+Unspecified
+Relatives were in the resistance
+Relatives were part of the allied forces
+Ancestors were displaced
+Relatives were persecuted__Relatives were in the resistance
+Spam</pre></td>
+                <td><button onclick="copyText('pre_10')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>knowledge_ww2</b></td>
+                <td><pre id="pre_11">4.More than average
+3.Somewhat
+1.Not at all
+NA
+5.Very much
+2.Very little</pre></td>
+                <td><button onclick="copyText('pre_11')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>knowledge_bergen_belsen</b></td>
+                <td><pre id="pre_12">3.Somewhat
+1.Not at all
+NA
+4.More than average
+2.Very little
+5.Very much</pre></td>
+                <td><button onclick="copyText('pre_12')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>knowledge_persecuted_jews</b></td>
+                <td><pre id="pre_13">4.More than average
+3.Somewhat
+1.Not at all
+NA
+5.Very much
+2.Very little</pre></td>
+                <td><button onclick="copyText('pre_13')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>knowledge_other_persecuted_groups</b></td>
+                <td><pre id="pre_14">4.More than average
+3.Somewhat
+1.Not at all
+NA
+5.Very much
+2.Very little</pre></td>
+                <td><button onclick="copyText('pre_14')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>known_persecuted_groups_open</b></td>
+                <td><pre id="pre_15">
+SS
+Jews__Homosexuals__Political opponents__Sinti and Roma
+Jews__Homosexuals__Jehovah's Witnesses__Sinti and Roma__Disabled people
+Sinti and Roma__Jews__Disabled people__Communists__Homosexuals
+Jews__Homosexuals
+Homosexuals__Jews__Sinti and Roma__Political opponents
+Jews__Homosexuals__Political opponents
+SS__SA__Political opponents
+Sinti and Roma__Jews__Homosexuals__Political opponents__Social Democrats
+Sinti and Roma__Jews__Black people
+Other
+Sinti and Roma__Homosexuals__Asocials__Disabled people__Mentally ill__Eastern Europeans__Political opponents__Communists__Artists__Black people__BIPOC
+Communists
+Spam
+Sinti and Roma__Jews__Political opponents
+Jews
+Jews__Sinti and Roma__Disabled people
+Jews__Disabled people__Sinti and Roma
+Jews__Communists__Black people__Homosexuals__Sinti and Roma__Disabled people
+Sinti and Roma__Jews__Homosexuals__Disabled people
+Juden,Gleichgesinte paare
+Jews__Homosexuals__Sinti and Roma__Political opponents
+LGBTQ+__Jews__Romanians__Disabled people
+Sinti and Roma__Homosexuals__Asocials__Political opponents__Jews__Career criminals__BIPOC__Jehovah's Witnesses__Forced laborers
+Jews__Homosexuals__Communists__Sinti and Roma__Political opponents
+Jews__Homosexuals__Sinti and Roma__Disabled people
+Jews__Communists__Homosexuals
+SS__Wehrmacht
+SS__SA
+Jews__Sinti and Roma
+Jews__Homosexuals__Communists__Sinti and Roma__Disabled people
+Jews__Political opponents__Sinti and Roma
+Sinti and Roma__Homosexuals__Asocials__Jews__Jehovah's Witnesses__Communists__Political opponents
+Jews__Jehovah's Witnesses__Homosexuals__Sick people__Disabled people
+Sinti and Roma
+Juden, Sinti und Roma, Homosexuelle,Menschen mit Behinderung, 
+Jews__Non-Aryans__Sinti and Roma__Disabled people
+Jews__Disabled people
+Jews__Slavs__Homosexuals__Jehovah's Witnesses
+Sinti and Roma__Homosexuals__Jehovah's Witnesses
+Disabled people__Socialists__Homosexuals__Jews__Sinti and Roma__Union leaders__Priests
+Jews__Homosexuals__Sinti and Roma__Asocials
+Sinti and Roma__Jews__Jehovah's Witnesses__Homosexuals__Asocials__Career criminals__Mentally ill__Disabled people__Communists__Socialists
+Jews__Political opponents__Sinti and Roma__Homosexuals__Disabled people
+Sinti and Roma__Homosexuals__Disabled people__Soviets
+Jews__Homosexuals__Sinti and Roma__Jehovah's Witnesses
+Jews__Sinti and Roma__Homosexuals__Political opponents__Disabled people
+Homosexuals__Jews__Sinti and Roma__Disabled people
+Jews__Homosexuals__Communists</pre></td>
+                <td><button onclick="copyText('pre_15')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>technologies_used</b></td>
+                <td><pre id="pre_16">
+Augmented Reality (AR)
+3D model viewer
+Virtual Reality (VR)
+Augmented Reality (AR)__Virtual Reality (VR)__3D model viewer
+Virtual Reality (VR)__3D model viewer
+Augmented Reality (AR)__Virtual Reality (VR)</pre></td>
+                <td><button onclick="copyText('pre_16')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>videogame_frequency</b></td>
+                <td><pre id="pre_17">Invalid
+0
+3
+20
+2
+5
+1
+8
+10
+Spam
+78
+9
+24
+25
+15
+0.5
+30
+168
+70
+4
+120</pre></td>
+                <td><button onclick="copyText('pre_17')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>felt_part_of_activity</b></td>
+                <td><pre id="pre_18">3.Undecided
+NA
+4.Agree
+1.Strongly disagree
+2.Disagree</pre></td>
+                <td><button onclick="copyText('pre_18')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>involvement_over_irrelevant_thoughts</b></td>
+                <td><pre id="pre_19">3.Undecided
+NA
+4.Agree
+2.Disagree
+1.Strongly disagree</pre></td>
+                <td><button onclick="copyText('pre_19')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>experienced_activity_feeling</b></td>
+                <td><pre id="pre_20">3.Undecided
+NA
+5.Strongly agree
+2.Disagree
+1.Strongly disagree</pre></td>
+                <td><button onclick="copyText('pre_20')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>lost_track_of_time</b></td>
+                <td><pre id="pre_21">3.Undecided
+NA
+5.Strongly agree
+2.Disagree
+4.Agree
+1.Strongly disagree</pre></td>
+                <td><button onclick="copyText('pre_21')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>was_interesting</b></td>
+                <td><pre id="pre_22">3.Undecided
+NA
+4.Agree
+5.Strongly agree
+5.Totally agree</pre></td>
+                <td><button onclick="copyText('pre_22')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>left_weak_impression</b></td>
+                <td><pre id="pre_23">3.Undecided
+NA
+2.Disagree
+1.Strongly disagree
+5.Strongly agree</pre></td>
+                <td><button onclick="copyText('pre_23')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>was_boring</b></td>
+                <td><pre id="pre_24">3.Undecided
+NA
+1.Strongly disagree
+2.Disagree
+5.Strongly agree</pre></td>
+                <td><button onclick="copyText('pre_24')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>thought_innovative</b></td>
+                <td><pre id="pre_25">3.Undecided
+NA
+4.Agree
+5.Strongly agree
+1.Strongly disagree</pre></td>
+                <td><button onclick="copyText('pre_25')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>understood_camp_appearance</b></td>
+                <td><pre id="pre_26">3.Undecided
+NA
+5.Strongly agree
+5.Totally agree
+2.Disagree
+4.Agree</pre></td>
+                <td><button onclick="copyText('pre_26')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>understood_life_in_camp</b></td>
+                <td><pre id="pre_27">3.Undecided
+NA
+2.Disagree
+5.Strongly agree
+5.Totally agree
+4.Agree
+1.Strongly disagree</pre></td>
+                <td><button onclick="copyText('pre_27')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>understood_camp_function</b></td>
+                <td><pre id="pre_28">3.Undecided
+NA
+2.Disagree
+5.Strongly agree
+5.Totally agree
+4.Agree</pre></td>
+                <td><button onclick="copyText('pre_28')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>felt_sympathetic_to_victims</b></td>
+                <td><pre id="pre_29">3.Undecided
+NA</pre></td>
+                <td><button onclick="copyText('pre_29')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>impact_on_own_life</b></td>
+                <td><pre id="pre_30">3.Undecided
+NA</pre></td>
+                <td><button onclick="copyText('pre_30')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>impact_on_society</b></td>
+                <td><pre id="pre_31">3.Undecided
+NA</pre></td>
+                <td><button onclick="copyText('pre_31')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>impact_society_details</b></td>
+                <td><pre id="pre_32"></pre></td>
+                <td><button onclick="copyText('pre_32')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>want_to_share_learning</b></td>
+                <td><pre id="pre_33">3.Undecided
+NA
+4.Agree
+5.Strongly agree
+2.Disagree
+5.Totally agree
+1.Strongly disagree</pre></td>
+                <td><button onclick="copyText('pre_33')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>plan_to_learn_more</b></td>
+                <td><pre id="pre_34">3.Undecided
+NA
+4.Agree
+5.Strongly agree
+2.Disagree
+5.Totally agree
+1.Strongly disagree</pre></td>
+                <td><button onclick="copyText('pre_34')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>additional_feedback</b></td>
+                <td><pre id="pre_35">
+Spam
+Usability comment: somewhat tricky to use, would retry online
+die </pre></td>
+                <td><button onclick="copyText('pre_35')">Copy</button></td>
+            </tr>
+        
+            <tr>
+                <td><b>email</b></td>
+                <td><pre id="pre_36">
+Wer@gy-her.de
+parrier@gmail.com
+roger
+kayleemsrielshmar205@gmail.com
+michel.bonkowski@ewe.net
+bambusapfel@gmail.com
+mariazaharia2002@yahoo.co.uk</pre></td>
+                <td><button onclick="copyText('pre_36')">Copy</button></td>
+            </tr>
+        
+        </table>
+    </body>
+    </html>
+    
