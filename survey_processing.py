@@ -57,11 +57,17 @@ df_survey_translated.to_csv(output_directory / "Log_Survey_Translated.csv")
 # %%
 ########## Remove Non answered - No survey
 df_unique = df_survey_translated[~df_survey_translated.duplicated(keep=False)]
-df_unique.to_csv(output_directory / "Log_Survey_Processed.csv")
-
-
+df_unique.to_csv(output_directory / "Log_Survey_Processed.csv", index=False)
 
 # %%
-from utils import generate_columnwise_unique_report
+########## Convert strings to list
+from utils import str_to_list
 
-generate_columnwise_unique_report(df_survey_translated, output_path="reports/unique_answers.html")
+df_unique = pd.read_csv("data/Log_Survey_Processed.csv", index_col=0)
+
+str_to_list_columns = ['visit_purpose', 'personal_connection_details', 'known_persecuted_groups_open', 'technologies_used']
+for col in str_to_list_columns:
+    df_unique[col] = df_unique[col].apply(str_to_list)
+
+df_unique.to_parquet("data/Log_Survey.parquet", index=False)
+# %%

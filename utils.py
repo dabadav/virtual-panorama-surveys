@@ -85,6 +85,27 @@ def extract_id_files(data_dir, pattern="Log_Survey_BB_*.json"):
     return ids
 
 
+def str_to_list(string):
+    if pd.isna(string):
+        return []
+    return string.split(sep='__')
+
+
+def visitor_profile(df):
+
+    research_education_level = ["Bachelor's degree", "Master's degree", "Doctorate"]
+
+    df['profile'] = False
+    df['profile'] = df['profile'].case_when(
+        caselist=[
+            ((df['visit_type'] == 'As a student with my group'), 'Student'),
+            ((df['personal_connection_nazi_history'] == 'Yes'), 'Personal Involvement'),
+            ((df['visit_purpose'].str.contains('For research', na=False)) & (df['education_level'].isin(research_education_level)), 'Researcher'),
+            ((pd.Series(True, index=df.index)), 'Tourist')
+        ]
+    )
+    return df
+
 #################
 # Miscellaneous #
 #################

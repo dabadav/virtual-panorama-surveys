@@ -1,24 +1,7 @@
 # %%
 import pandas as pd
 # df_survey = pd.read_csv("data/Log_Survey_Processed.csv", index_col=0)
-df_survey = pd.read_parquet("data/Log_Survey_List.parquet")
-
-# %%
-# example = 'Jews__Homosexuals__Political opponents__Sinti and Roma'
-def str_to_list(string):
-    if pd.isna(string):
-        return []
-    return string.split(sep='__')
-
-str_to_list_columns = ['visit_purpose', 'personal_connection_details', 'known_persecuted_groups_open', 'technologies_used']
-
-for col in str_to_list_columns:
-    df_survey[col] = df_survey[col].apply(str_to_list)
-
-
-df_survey.to_parquet("data/Log_Survey_List.parquet", index=False)
-# df_survey = pd.read_csv("data/Log_Survey_List.csv", index_col=0)
-# string to list functi
+df_survey = pd.read_parquet("data/Log_Survey.parquet")
 
 # %% 
 selected_columns = [
