@@ -88,23 +88,28 @@ def extract_id_files(data_dir, pattern="Log_Survey_BB_*.json"):
 def str_to_list(string):
     if pd.isna(string):
         return []
-    return string.split(sep='__')
+    return string.split(sep="__")
 
 
 def visitor_profile(df):
 
     research_education_level = ["Bachelor's degree", "Master's degree", "Doctorate"]
 
-    df['profile'] = False
-    df['profile'] = df['profile'].case_when(
+    df["profile"] = False
+    df["profile"] = df["profile"].case_when(
         caselist=[
-            ((df['visit_type'] == 'As a student with my group'), 'Student'),
-            ((df['personal_connection_nazi_history'] == 'Yes'), 'Personal Involvement'),
-            ((df['visit_purpose'].str.contains('For research', na=False)) & (df['education_level'].isin(research_education_level)), 'Researcher'),
-            ((pd.Series(True, index=df.index)), 'Tourist')
+            ((df["visit_type"] == "As a student with my group"), "Student"),
+            ((df["personal_connection_nazi_history"] == "Yes"), "Personal Involvement"),
+            (
+                (df["visit_purpose"].str.contains("For research", na=False))
+                & (df["education_level"].isin(research_education_level)),
+                "Researcher",
+            ),
+            ((pd.Series(True, index=df.index)), "Tourist"),
         ]
     )
     return df
+
 
 #################
 # Miscellaneous #
@@ -119,6 +124,7 @@ from urllib.request import pathname2url
 
 import pandas as pd
 from IPython.display import HTML, display
+
 
 def clean_duplicated_json(data_dir, pattern):
     files_info = []
@@ -140,6 +146,7 @@ def clean_duplicated_json(data_dir, pattern):
             os.remove(file)
 
     print("Finished processing and deleting matching files.")
+
 
 def remove_json_files_with_test_value_from_index(
     df: pd.DataFrame, directory: str, exact_match: bool = False
@@ -182,6 +189,38 @@ def remove_json_files_with_test_value_from_index(
 #################
 #    Reports    #
 #################
+
+import base64
+
+
+def embed_image_base64(path, caption=None, alt_text=None, width="100%"):
+    """
+    Embeds an image as a Base64-encoded string in HTML.
+
+    Parameters:
+    - path (str): Path to the image file.
+    - caption (str): Optional caption to display.
+    - alt_text (str): Alt text for accessibility.
+    - width (str): Width of the image in HTML (default: 100%).
+
+    Returns:
+    - str: HTML string with embedded image.
+    """
+    with open(path, "rb") as image_file:
+        encoded = base64.b64encode(image_file.read()).decode("utf-8")
+
+    ext = path.split(".")[-1].lower()
+    mime_type = f"image/{'jpeg' if ext in ['jpg', 'jpeg'] else ext}"
+    alt = alt_text or caption or "Embedded Image"
+    caption_html = f'<div class="caption">{caption}</div>' if caption else ""
+
+    return f"""
+    <div class="card">
+        <img src="data:{mime_type};base64,{encoded}" alt="{alt}" style="width:{width}; height:auto; border:1px solid #ccc; border-radius:8px;">
+        {caption_html}
+    </div>
+    """
+
 
 def generate_columnwise_unique_report(
     df: pd.DataFrame, output_path: str = "unique_values_columnwise.html"
@@ -242,6 +281,7 @@ def generate_columnwise_unique_report(
 
     return output_path
 
+
 def render_mapping_dict_to_html(
     mapping: dict,
     title: str = "Mapping Overview",
@@ -281,9 +321,12 @@ def render_mapping_dict_to_html(
     Path(output_path).write_text(html, encoding="utf-8")
     print(f"{output_path}")
 
-from pathlib import Path
-from bs4 import BeautifulSoup
+
 import re
+from pathlib import Path
+
+from bs4 import BeautifulSoup
+
 
 def combine_html(file_info, output_path="combined_tabs.html"):
     """
@@ -302,11 +345,17 @@ def combine_html(file_info, output_path="combined_tabs.html"):
             html = f.read()
 
         # Extract styles from <style> or <link> tags
-        styles += re.findall(r"<style.*?>.*?</style>", html, flags=re.DOTALL | re.IGNORECASE)
-        styles += re.findall(r'<link[^>]+rel=["\']stylesheet["\'][^>]*>', html, flags=re.IGNORECASE)
+        styles += re.findall(
+            r"<style.*?>.*?</style>", html, flags=re.DOTALL | re.IGNORECASE
+        )
+        styles += re.findall(
+            r'<link[^>]+rel=["\']stylesheet["\'][^>]*>', html, flags=re.IGNORECASE
+        )
 
         # Extract body content
-        body_match = re.search(r"<body[^>]*>(.*?)</body>", html, flags=re.DOTALL | re.IGNORECASE)
+        body_match = re.search(
+            r"<body[^>]*>(.*?)</body>", html, flags=re.DOTALL | re.IGNORECASE
+        )
         body = body_match.group(1).strip() if body_match else html.strip()
 
         tab_id = f"tab{i}"
@@ -377,3 +426,50 @@ def combine_html(file_info, output_path="combined_tabs.html"):
         f.write(combined_html)
 
     return output_path
+
+
+from pathlib import Path
+
+import plotly.io as pio
+
+
+def export_all_plots_combined_html(output_file="profile_distribution_report.html"):
+    html_blocks = []
+
+    for question in question_columns:
+        # Generate the figure
+        graph_component = create_percentage_distribution_plot(question)
+        fig = graph_component.figure
+
+        # Convert figure to HTML fragment (no full page wrapper)
+        html_fragment = pio.to_html(fig, include_plotlyjs=False, full_html=False)
+        html_blocks.append(f"<div style='margin-bottom:40px;'>{html_fragment}</div>")
+
+    # Wrap all fragments in full HTML document
+    full_html = f"""
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Demographic Response Distributions</title>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <style>
+            body {{
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }}
+            h1 {{
+                text-align: center;
+            }}
+        </style>
+    </head>
+    <body>
+        <h1>Per-Profile Response Distributions (All Questions)</h1>
+        {"".join(html_blocks)}
+    </body>
+    </html>
+    """
+
+    # Write to file
+    Path(output_file).write_text(full_html, encoding="utf-8")
+    print(f"✅ Combined interactive HTML report saved to: {output_file}")

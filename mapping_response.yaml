@@ -92,8 +92,8 @@ mapping_response:
   "High school (gymnasium)": "High school"
   "Gymnasium": "High school"
 
-  "Berufsausbildung oder Lehre": "Vocational training or apprenticeship"
-  "Vocational training apprenticeship": "Vocational training or apprenticeship"
+  "Berufsausbildung oder Lehre": "Vocational training"
+  "Vocational training apprenticeship": "Vocational training"
 
   "Bachelor-Abschluss": "Bachelor's degree"
   "Bachelor's degree": "Bachelor's degree"
@@ -153,6 +153,7 @@ mapping_response:
   "To learn more about the history_For research": "To learn more about the history__For research"
   "To learn more about the history_For commemoration": "To learn more about the history__For commemoration"
   "To learn more about the history_For commemoration_For research": "To learn more about the history__For commemoration__For research"
+  "For commemoration_For research": "For commemoration__For research"
 
   "Um mehr über die Geschichte zu erfahren_Zum Gedenken_Für die Forschung": "To learn more about the history__For commemoration__For research"
   "Um mehr über die Geschichte zu erfahren_Zum Gedenken_Für die Forschung_Andere": "To learn more about the history__For commemoration__For research__Other"
@@ -318,9 +319,11 @@ mapping_response:
   "Sinti, Roma, Homosexuelle, Asoziale, , pol. Verfolgt, Juden, Berufsverbrecher, POC, Zeugen Jehovas, ZwangsarbeiterInnen,": "Sinti and Roma__Homosexuals__Asocials__Political opponents__Jews__Career criminals__BIPOC__Jehovah's Witnesses__Forced laborers"
   "Juden, Slawen, Homosexuelle, Zeugen Jehovas": "Jews__Slavs__Homosexuals__Jehovah's Witnesses"
   "juden, homosexuelle,kommunisten": "Jews__Homosexuals__Communists"
-  "Juden, Homosexuelle": Jews__Homosexuals
+  "Juden, Homosexuelle": "Jews__Homosexuals"
   "juden, homosexuelle,kommunisten": Jews__Homosexuals__Communists
-  "sinti, roma, juden, behinderte, kommunisten, homosexuelle": Sinti and Roma__Jews__Disabled people__Communists__Homosexuals
+  "sinti, roma, juden, behinderte, kommunisten, homosexuelle": "Sinti and Roma__Jews__Disabled people__Communists__Homosexuals"
+  "Juden,Gleichgesinte paare": "Jews__Homosexuals"
+  "Juden, Sinti und Roma, Homosexuelle,Menschen mit Behinderung, ": "Jews__Sinti and Roma__Homosexuals__Disabled people"
 
   # Tech
   "Virtual Reality (VR)": "Virtual Reality (VR)"
